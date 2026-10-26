@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const log = console.log.bind(console);
+      let user = {
+        name: "Arab",
+        age: 17,
+        userInfo: function() {
+            return `Пользователь: ${this.name} Возраст: ${this.age}`
+        }
+      };
+      log(user.userInfo())
+
+
+      let car = {
+        brand: "BMW",
+        model: "M5 F90",
+        color: "Black",
+        carInfo: function() {
+            return `Марка ${this.brand}, Модель: ${this.model}, Цвет: ${this.color}`
+        }
+      }
+      log(car.carInfo())
+      car.engine = function(){
+        return "Объём двигателя: 4,4 литра"
+      }
+      log(car)
+      log(car.carInfo(), car.engine())
+    </script>
+  </body>
+</html>
